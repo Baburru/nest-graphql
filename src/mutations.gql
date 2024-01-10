@@ -1,0 +1,14 @@
+
+  mutation createRecipe($title: String!, $description: String, $ingredients: [String!]!) {
+    addRecipe(newRecipeData: {
+      title: $title
+      description: $description
+      ingredients: $ingredients
+    }
+    ) {
+      id
+      title
+      description
+      ingredients
+    }
+  }
